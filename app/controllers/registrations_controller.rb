@@ -1,7 +1,7 @@
 class RegistrationsController < ApplicationController
   # Without this, the Authentication concern requires login before signup —
   # the chicken-and-egg problem.
-  allow_unauthenticated_access only: [:new, :create]
+  allow_unauthenticated_access only: [ :new, :create ]
 
   def new
     @user = User.new
