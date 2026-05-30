@@ -1,0 +1,14 @@
+<h1>Just the Recipes</h1>
+
+<p>Placeholder — recipes feature coming.</p>
+
+<% if authenticated? %>
+  <p>Signed in.</p>
+  <%= button_to "Log out", session_path, method: :delete %>
+<% else %>
+  <p>
+    <%= link_to "Sign up", new_registration_path %>
+    or
+    <%= link_to "Log in", new_session_path %>
+  </p>
+<% end %>
